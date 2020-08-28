@@ -1,4 +1,7 @@
+const moment = require('moment');
+
 module.exports = {
+    base:"/docs/",
     title:'我的博客',
     description:'我的描述',
     head: [
@@ -6,6 +9,19 @@ module.exports = {
       ["mate",{name: "author",content: "奕舟"}],
       ["mate",{name: "keywords",content: "vuepress介绍,vuepress说明,奕舟"}],
       ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ],
+    plugins: [
+      [
+        '@vuepress/last-updated',
+        {
+          transformer: (timestamp) => {
+            // 不要忘了安装 moment
+            const moment = require('moment')
+            moment.locale('zh-cn')
+            return moment(timestamp).format("LLLL")
+          }
+        }
+      ]
     ],
     themeConfig: {
       lastUpdated: '更新时间', // string | boolean
