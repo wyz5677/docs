@@ -4,7 +4,7 @@ home: true
 heroText: 奕舟的博客
 tagline: vuePress
 actionText: GO →
-actionLink: /skill/javascript/j-aaa
+actionLink: /skill/vue/grammar/grammar
 features:
 - title: 实用方法
   details: 需求实例,代码优化,动画实例.

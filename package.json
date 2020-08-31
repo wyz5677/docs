@@ -21,5 +21,8 @@
   "homepage": "https://github.com/wyz5677/docs#readme",
   "dependencies": {
     "moment": "^2.27.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.5.4"
   }
 }
