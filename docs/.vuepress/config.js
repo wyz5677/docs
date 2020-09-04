@@ -27,6 +27,14 @@ module.exports = {
       nav: [
         { text: '主页', link: '/' },
         {
+          text: 'htmlcss',
+          items: [
+            { text: 'htmlcss', items: [
+              { text: '语法', link: '/skill/htmlcss/grammar/grammar' },
+            ] }
+          ]
+        },
+        {
           text: 'js',
           items: [
             { text: 'js', items: [
@@ -40,7 +48,9 @@ module.exports = {
           items: [
             { text: 'vue', items: [
               { text: '语法', link: '/skill/vue/grammar/grammar' },
-              { text: '代码优化', link: '/skill/vue/code/code' }
+              { text: '代码优化', link: '/skill/vue/code/code' },
+              { text: '实用方法', link: '/skill/vue/methods/methods' },
+              { text: '实用工具', link: '/skill/vue/utils/utils' },
             ] }
           ]
         },
@@ -78,7 +88,30 @@ module.exports = {
             children: [
               { title: '代码优化', path:'code/code'},
             ]
+          },
+          {
+            title: '实用方法',
+            collapsable: false,
+            children: [
+              { title: '实用方法', path:'methods/methods'},
+            ]
+          },
+          {
+            title: '实用工具',
+            collapsable: false,
+            children: [
+              { title: '实用工具', path:'utils/utils'},
+            ]
           }
+        ],
+        '/skill/htmlcss/': [
+          {
+            title: '常用语法',
+            collapsable: false,
+            children: [
+              { title: '常用语法', path:'grammar/grammar'}
+            ]
+          },
         ]
       }
     }

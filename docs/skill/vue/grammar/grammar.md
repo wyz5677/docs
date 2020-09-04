@@ -4,6 +4,7 @@ title: vue常用语法
 
 ## 目录
 **1. [watch](#jump1)**  
+**2. [动态样式](#jump2)**  
 
 ### <span id="jump1">1.watch</span>
 
@@ -20,6 +21,7 @@ title: vue常用语法
     }
 ```
 #### watch的深度监听和首次执行
+
 :tropical_drink: 解释  
    deep，默认值是 false，代表是否深度监听.  
    immediate:true代表如果在 wacth 里声明了之后，就会立即先去执行里面的handler方法，如果为 false就跟我们以前的效果一样，不会在绑定的时候就执行.  
@@ -56,4 +58,44 @@ title: vue常用语法
             }
         }
     }
+```
+
+### <span id="jump2">2.动态样式</span>
+
+:tropical_drink: 解释  
+    v-bind绑定动态样式(常用的是绑定对象,数组我不常用)
+   
+:sparkles: 例子1 
+``` js {1}
+    <div style="font-size:50px;" :style="{'color':selectMoney?'#333333':'#999999'}">
+        ¥ {{selectMoney}}
+    </div>
+```
+
+:sparkles: 例子2
+``` js {1}
+    <p class="bottomPrice" :class='{"active":activity_times}'>售价<span>123</span>{{price}}</p>
+
+    // less
+    .bottomPrice{
+      &.active {
+        color: #55cbba;
+      }
+    }
+    // 注意 对象的属性如果带-就必须要带""
+```
+
+
+:sparkles: 例子3
+``` js
+    <div :class="btnClass[item.staus]"></div>
+    <div :class="btnClass[item.staus]"></div>
+    <div :class="btnClass[item.staus]"></div>
+
+    btnClss:{
+        '0':"right-btn no-active"
+        '1':"right-btn active"
+        '2':"right-btn success"
+    }
+    // 多状态控制
 ```
