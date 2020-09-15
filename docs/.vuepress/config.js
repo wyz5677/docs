@@ -51,6 +51,15 @@ module.exports = {
               { text: '代码优化', link: '/skill/vue/code/code' },
               { text: '实用方法', link: '/skill/vue/methods/methods' },
               { text: '实用工具', link: '/skill/vue/utils/utils' },
+              { text: '常用动画', link: '/skill/vue/animations/animations'},
+            ] }
+          ]
+        },
+        {
+          text: 'git',
+          items: [
+            { text: 'git', items: [
+              { text: 'git常用操作', link: '/skill/git/git' },
             ] }
           ]
         },
@@ -102,6 +111,13 @@ module.exports = {
             children: [
               { title: '实用工具', path:'utils/utils'},
             ]
+          },
+          {
+            title: '常用动画',
+            collapsable: false,
+            children: [
+              { title: '常用动画', path:'animations/animations'},
+            ]
           }
         ],
         '/skill/htmlcss/': [
@@ -110,6 +126,15 @@ module.exports = {
             collapsable: false,
             children: [
               { title: '常用语法', path:'grammar/grammar'}
+            ]
+          },
+        ],
+        '/skill/git/': [
+          {
+            title: '常用操作',
+            collapsable: false,
+            children: [
+              { title: '常用操作', path:'git'}
             ]
           },
         ]

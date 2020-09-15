@@ -85,8 +85,12 @@ title: vue常用语法
     // 注意 对象的属性如果带-就必须要带""
 ```
 
-
 :sparkles: 例子3
+``` js
+    <p :class="TodayProfit > 0 ? 'green' : 'red'">123</p>
+```
+
+:sparkles: 例子4
 ``` js
     <div :class="btnClass[item.staus]"></div>
     <div :class="btnClass[item.staus]"></div>
