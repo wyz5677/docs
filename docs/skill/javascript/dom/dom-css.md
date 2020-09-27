@@ -6,7 +6,11 @@ title: js常用语法
 # js常用语法
 
 ----
-## js控制css
+### 目录
+**1. [js控制css](#jump2)**   
+
+
+### <span id="jump1">1.js控制css</span>
 ### 常用
 :sparkles: 控制ref
 ``` js

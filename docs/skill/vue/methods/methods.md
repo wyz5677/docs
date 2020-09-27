@@ -5,6 +5,7 @@ title: vue中实用方法
 ## 目录
 **1. [后退页面时回到滚动记录的位置](#jump1)**  
 **2. [前端倒计时功能](#jump2)**  
+**3. [文字滚动效果](#jump3)**  
 
 ### <span id="jump1">1.后退页面时回到滚动记录的位置</span>
 
@@ -50,10 +51,30 @@ const router = new VueRouter({
 <router-view v-if="!$route.meta.keepAlive"></router-view>
 ```
 
-### <span id="jump2">1.前端倒计时功能</span>
+### <span id="jump2">2.前端倒计时功能</span>
 
 :tropical_drink: 需求分析  
   前端倒计时功能
 
 :sparkles: 解决方案   
 ![avatar](./img/countDown.png)
+
+### <span id="jump3">3.文字滚动效果</span>
+
+:tropical_drink: 需求分析  
+  前端文字滚动效果 使用marquee html标签即可
+
+:sparkles: 解决方案   
+``` js {12}
+//路由中:
+    
+<div class="notice-right">
+  <marquee direction="left" style="line-height:40px;">
+    <template v-for="(item,index) in lotteryFeed">
+      <img :key="index+'lotteryFeed'" style="width:14px;position:relative;top:2px;" :src='item.icon' alt="">
+      <span :key="index+'lotteryFeed1'" @click="lotteryFeedClick(item)">{{ item.title }}</span>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </template>
+  </marquee>
+</div>
+```

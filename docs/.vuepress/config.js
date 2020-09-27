@@ -85,35 +85,35 @@ module.exports = {
         ],
         '/skill/vue/': [
           {
-            title: '常用语法',
+            // title: '常用语法',
             collapsable: false,
             children: [
               { title: '常用语法', path:'grammar/grammar'}
             ]
           },
           {
-            title: '代码优化',
+            // title: '代码优化',
             collapsable: false,
             children: [
               { title: '代码优化', path:'code/code'},
             ]
           },
           {
-            title: '实用方法',
+            // title: '实用方法',
             collapsable: false,
             children: [
               { title: '实用方法', path:'methods/methods'},
             ]
           },
           {
-            title: '实用工具',
+            // title: '实用工具',
             collapsable: false,
             children: [
               { title: '实用工具', path:'utils/utils'},
             ]
           },
           {
-            title: '常用动画',
+            // title: '常用动画',
             collapsable: false,
             children: [
               { title: '常用动画', path:'animations/animations'},
@@ -122,7 +122,7 @@ module.exports = {
         ],
         '/skill/htmlcss/': [
           {
-            title: '常用语法',
+            // title: '常用语法',
             collapsable: false,
             children: [
               { title: '常用语法', path:'grammar/grammar'}
@@ -131,7 +131,7 @@ module.exports = {
         ],
         '/skill/git/': [
           {
-            title: '常用操作',
+            // title: '常用操作',
             collapsable: false,
             children: [
               { title: '常用操作', path:'git'}
