@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/wyz5677/docs#readme",
   "dependencies": {
+    "@vssue/api-github-v3": "^1.4.4",
+    "@vssue/vuepress-plugin-vssue": "^1.4.6",
     "moment": "^2.27.0"
   },
   "devDependencies": {

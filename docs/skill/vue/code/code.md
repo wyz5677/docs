@@ -49,3 +49,5 @@ title: 写代码总结
     // 使用:
     this.$store.commit('SET_ISLOADING',true)
 ```
+
+<Vssue title="Vssue Demo" />
