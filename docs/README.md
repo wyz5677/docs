@@ -15,3 +15,5 @@ features:
 footer: 海到尽头天作岸,山登绝顶我为峰.
 ---
 # Hello VuePress!
+
+<Vssue title="Vssue Demo" />
