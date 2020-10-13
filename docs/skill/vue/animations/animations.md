@@ -9,6 +9,7 @@ title: 常用动画
 ## 目录
 **1. [每行文字逐渐出现](#jump1)**  
 **2. [红包甩动](#jump2)**  
+**2. [膨胀效果](#jump3)**  
 
 ### <span id="jump1">1.每行文字逐渐出现</span>
 :sparkles: 例子1
@@ -271,5 +272,37 @@ title: 常用动画
         100% {
             transform: translate(0, 0) rotate(0)
         }
+    }
+```
+
+### <span id="jump3">3.膨胀效果</span>
+:sparkles: 例子1
+<ClientOnly>
+  <expand></expand>
+</ClientOnly>
+
+``` js
+    // html:
+    <div v-if="donghuaShow">
+      <img @touchstart.prevent='()=>null' 
+      onclick="return false" 
+      width="100%"
+      height="100%"
+      class="bounce"
+      src="../public/assets/img/expand.png"
+      alt="">
+    </div>
+
+    // css:
+    .bounce{
+        animation: bounce-in 2s .5s ease-in-out infinite;
+    }
+
+    @keyframes bounce-in {
+    20%{  transform: scale(.9);}
+    40%{  transform: scale(1.05);}
+    60%{  transform: scale(.95);}
+    80%{  transform: scale(1);}
+    100%{  transform: scale(1);}
     }
 ```

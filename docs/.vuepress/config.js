@@ -59,7 +59,7 @@ module.exports = {
               { text: '语法', link: '/skill/vue/grammar/grammar' },
               { text: '代码优化', link: '/skill/vue/code/code' },
               { text: '实用方法', link: '/skill/vue/methods/methods' },
-              { text: '实用工具', link: '/skill/vue/utils/utils' },
+              { text: '实用工具', link: '/skill/vue/utils/skills' },
               { text: '常用动画', link: '/skill/vue/animations/animations'},
             ] }
           ]
@@ -115,10 +115,11 @@ module.exports = {
             ]
           },
           {
-            // title: '实用工具',
+            title: '实用工具',
             collapsable: false,
             children: [
-              { title: '实用工具', path:'utils/utils'},
+              { title: '实用技能', path:'utils/skills'},
+              { title: '过滤器', path:'utils/filters'},
             ]
           },
           {
