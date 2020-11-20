@@ -49,6 +49,7 @@ module.exports = {
             { text: 'js', items: [
               { text: '常用js对象等api', link: '/skill/javascript/objectApi/j-arrayApi' },
               { text: '常用dom操作', link: '/skill/javascript/dom/dom-css' },
+              { text: 'es6总结', link: '/skill/javascript/es6/es6' },
             ] }
           ]
         },
@@ -89,6 +90,13 @@ module.exports = {
             collapsable: false,
             children: [
               { title: 'js控制css', path:'dom/dom-css'}
+            ]
+          },
+          {
+            title: 'es6总结',
+            collapsable: false,
+            children: [
+              { title: 'promise', path:'es6/es6'}
             ]
           },
         ],

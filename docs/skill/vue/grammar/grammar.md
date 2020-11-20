@@ -5,6 +5,7 @@ title: vue常用语法
 ## 目录
 **1. [watch](#jump1)**  
 **2. [动态样式](#jump2)**  
+np**2. [绑定事件](#jump3)**  
 
 ### <span id="jump1">1.watch</span>
 
@@ -103,3 +104,21 @@ title: vue常用语法
     }
     // 多状态控制
 ```
+
+### <span id="jump3">3.绑定事件</span>
+
+:tropical_drink: 解释  
+    v-bind绑定事件有注意的地方
+   
+:sparkles: 例子1 
+``` js
+    // abc为方法 可以不加()   即@click="abc()"也行
+    <div @click="abc" class="rotate-record"></div>
+```
+
+:sparkles: 例子2
+``` js
+    // 如果用了()=>{}  内部事件必须要()调用 不然不生效
+    <div @click="()=>{abc()}" class="rotate-record"></div>
+```
+

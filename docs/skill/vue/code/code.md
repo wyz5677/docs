@@ -20,9 +20,9 @@ title: 写代码总结
     import { ERR_OK } from "api/config"
 
     async _getOxElecConfigList(){
-        let json = await getOxElecConfigList().catch(err => {});
-        if(json['code'] !== ERR_OK) return;
-        this.elecConfig=json['data']
+        let res = await getOxElecConfigList().catch(err => {});
+        if(res['code'] !== ERR_OK) return;
+        this.elecConfig=res['data']
     }
 ```
 

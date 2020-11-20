@@ -7,7 +7,7 @@ title: js常用语法
 
 ----
 ### 目录
-**1. [js控制css](#jump2)**   
+**1. [js控制css](#jump1)**   
 
 
 ### <span id="jump1">1.js控制css</span>
