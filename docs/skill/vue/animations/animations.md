@@ -16,6 +16,10 @@ title: 常用动画
 <ClientOnly>
   <my-demo></my-demo>
 </ClientOnly>
+<!-- 测试代码 -->
+<ClientOnly>
+  <test></test>
+</ClientOnly>
 
 ``` js
     // html:

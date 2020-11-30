@@ -8,6 +8,7 @@ title: js常用语法
 ----
 ### 目录
 **1. [promise](#jump1)**   
+**2. [async](#jump2)**   
 
 
 ### <span id="jump1">1.promise</span>
@@ -198,4 +199,45 @@ Promise，简单说就是一个容器，里面保存着某个未来才会结束�
         })
     // 拿到所有promise执行完后的结果
     let result = await Promise.all(promises)
+```
+
+### <span id="jump2">2.async</span>
+:tropical_drink: 作用:   
+异步函数,同步等待.   
+要点:
+
+    1.async 函数返回的是一个 Promise 对象,如果在函数中 return 一个直接量，async 会把这个直接量通过 Promise.resolve() 封装成 Promise 对象。
+    2.await针对所跟不同表达式的处理方式：如果一个 Promise 被传递给一个 await 操作符：await 会暂停执行，等待 Promise 对象 resolve，然后恢复 async 函数的执行并返回解析值。非 Promise 对象：直接返回对应的值。
+
+:sparkles: 基本使用,解释要点1
+``` js
+    async function testAsync() {
+        return "hello async";
+    }
+
+    const result = testAsync();
+    // Promise { 'hello async' }
+    console.log(result);
+```
+
+:sparkles: 基本使用,解释要点2
+``` js
+function testAwait(){
+    // 只有返回Promise 对象await会暂停执行 否则会返回对应的值
+   return new Promise((resolve) => {
+       setTimeout(function(){
+          console.log("testAwait");
+          resolve();
+       }, 1000);
+   });
+}
+
+async function helloAsync(){
+   await testAwait();
+   console.log("helloAsync");
+ }
+
+// testAwait
+// helloAsync
+helloAsync();
 ```

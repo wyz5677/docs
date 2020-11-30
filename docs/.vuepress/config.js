@@ -73,6 +73,14 @@ module.exports = {
             ] }
           ]
         },
+        {
+          text: 'interest',
+          items: [
+            { text: 'interest', items: [
+              { text: '兴趣', link: '/skill/interest/interest' },
+            ] }
+          ]
+        },
         { text: '外链', link: 'https://google.com' },
       ],
       sidebar: {
@@ -153,6 +161,15 @@ module.exports = {
             collapsable: false,
             children: [
               { title: '常用操作', path:'git'}
+            ]
+          },
+        ],
+        '/skill/interest/': [
+          {
+            // title: '兴趣爱好',
+            collapsable: false,
+            children: [
+              { title: '兴趣爱好', path:'interest'}
             ]
           },
         ]
