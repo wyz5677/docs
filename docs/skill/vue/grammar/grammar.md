@@ -5,7 +5,7 @@ title: vue常用语法
 ## 目录
 **1. [watch](#jump1)**  
 **2. [动态样式](#jump2)**  
-np**2. [绑定事件](#jump3)**  
+**2. [绑定事件](#jump3)**  
 
 ### <span id="jump1">1.watch</span>
 

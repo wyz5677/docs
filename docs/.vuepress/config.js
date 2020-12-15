@@ -81,6 +81,14 @@ module.exports = {
             ] }
           ]
         },
+        {
+          text: 'interview',
+          items: [
+            { text: 'interview', items: [
+              { text: '面试', link: '/skill/interview/interview' },
+            ] }
+          ]
+        },
         { text: '外链', link: 'https://google.com' },
       ],
       sidebar: {
@@ -170,6 +178,15 @@ module.exports = {
             collapsable: false,
             children: [
               { title: '兴趣爱好', path:'interest'}
+            ]
+          },
+        ],
+        '/skill/interview/': [
+          {
+            // title: '兴趣爱好',
+            collapsable: false,
+            children: [
+              { title: '面试', path:'interview'}
             ]
           },
         ]
