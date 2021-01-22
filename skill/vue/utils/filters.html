@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>vue中实用工具过滤器 | 我的博客</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    <mate name="author" content="奕舟"></mate>
+    <mate name="keywords" content="vuepress介绍,vuepress说明,奕舟"></mate>
+    <link rel="icon" href="/docs/favicon.ico">
+    <meta name="description" content="我的描述">
+    <link rel="preload" href="/docs/assets/css/0.styles.811fc087.css" as="style"><link rel="preload" href="/docs/assets/js/app.a41a76ec.js" as="script"><link rel="preload" href="/docs/assets/js/2.2946c6af.js" as="script"><link rel="preload" href="/docs/assets/js/27.440ab64e.js" as="script"><link rel="prefetch" href="/docs/assets/js/10.f219c325.js"><link rel="prefetch" href="/docs/assets/js/11.5339765b.js"><link rel="prefetch" href="/docs/assets/js/12.5af12613.js"><link rel="prefetch" href="/docs/assets/js/13.2bd4257a.js"><link rel="prefetch" href="/docs/assets/js/14.ee8aa313.js"><link rel="prefetch" href="/docs/assets/js/15.c749da62.js"><link rel="prefetch" href="/docs/assets/js/16.b65ba2e7.js"><link rel="prefetch" href="/docs/assets/js/17.bd048b5f.js"><link rel="prefetch" href="/docs/assets/js/18.b48b0456.js"><link rel="prefetch" href="/docs/assets/js/19.4c2f9ea9.js"><link rel="prefetch" href="/docs/assets/js/20.5ac25aea.js"><link rel="prefetch" href="/docs/assets/js/21.5ab87179.js"><link rel="prefetch" href="/docs/assets/js/22.6c69e214.js"><link rel="prefetch" href="/docs/assets/js/23.6fdab5dc.js"><link rel="prefetch" href="/docs/assets/js/24.8cd217b3.js"><link rel="prefetch" href="/docs/assets/js/25.c4ed0fd6.js"><link rel="prefetch" href="/docs/assets/js/26.90580683.js"><link rel="prefetch" href="/docs/assets/js/28.89af4c96.js"><link rel="prefetch" href="/docs/assets/js/3.d314172a.js"><link rel="prefetch" href="/docs/assets/js/4.b04e8cc0.js"><link rel="prefetch" href="/docs/assets/js/5.d9da747d.js"><link rel="prefetch" href="/docs/assets/js/6.9b7c95ac.js"><link rel="prefetch" href="/docs/assets/js/7.7e425e3b.js"><link rel="prefetch" href="/docs/assets/js/8.d8d3fcb0.js"><link rel="prefetch" href="/docs/assets/js/9.918af76a.js">
+    <link rel="stylesheet" href="/docs/assets/css/0.styles.811fc087.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/docs/" class="home-link router-link-active"><img src="/docs/assets/img/logo.png" alt="我的博客" class="logo"> <span class="site-name can-hide">我的博客</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="htmlcss" class="dropdown-title"><span class="title">htmlcss</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          htmlcss
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/htmlcss/grammar/grammar.html" class="nav-link">
+  语法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js" class="dropdown-title"><span class="title">js</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          js
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/javascript/objectApi/j-arrayApi.html" class="nav-link">
+  常用js对象等api
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/javascript/dom/dom-css.html" class="nav-link">
+  常用dom操作
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/javascript/es6/es6.html" class="nav-link">
+  es6总结
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/javascript/utils/utils.html" class="nav-link">
+  实用工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/vue/grammar/grammar.html" class="nav-link">
+  语法
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/vue/code/code.html" class="nav-link">
+  代码优化
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/vue/methods/methods.html" class="nav-link">
+  实用方法
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/vue/utils/skills.html" class="nav-link">
+  实用工具
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/vue/animations/animations.html" class="nav-link">
+  常用动画
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git" class="dropdown-title"><span class="title">git</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/git/git.html" class="nav-link">
+  git常用操作
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interest" class="dropdown-title"><span class="title">interest</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          interest
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/interest/interest.html" class="nav-link">
+  兴趣
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interview" class="dropdown-title"><span class="title">interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          interview
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/interview/interview.html" class="nav-link">
+  面试
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  外链
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/docs/" class="nav-link">
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="htmlcss" class="dropdown-title"><span class="title">htmlcss</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          htmlcss
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/htmlcss/grammar/grammar.html" class="nav-link">
+  语法
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="js" class="dropdown-title"><span class="title">js</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          js
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/javascript/objectApi/j-arrayApi.html" class="nav-link">
+  常用js对象等api
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/javascript/dom/dom-css.html" class="nav-link">
+  常用dom操作
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/javascript/es6/es6.html" class="nav-link">
+  es6总结
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/javascript/utils/utils.html" class="nav-link">
+  实用工具
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="vue" class="dropdown-title"><span class="title">vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          vue
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/vue/grammar/grammar.html" class="nav-link">
+  语法
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/vue/code/code.html" class="nav-link">
+  代码优化
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/vue/methods/methods.html" class="nav-link">
+  实用方法
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/vue/utils/skills.html" class="nav-link">
+  实用工具
+</a></li><li class="dropdown-subitem"><a href="/docs/skill/vue/animations/animations.html" class="nav-link">
+  常用动画
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="git" class="dropdown-title"><span class="title">git</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          git
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/git/git.html" class="nav-link">
+  git常用操作
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interest" class="dropdown-title"><span class="title">interest</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          interest
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/interest/interest.html" class="nav-link">
+  兴趣
+</a></li></ul></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="interview" class="dropdown-title"><span class="title">interview</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          interview
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/docs/skill/interview/interview.html" class="nav-link">
+  面试
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://google.com" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  外链
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/skill/vue/grammar/grammar.html" class="sidebar-link">常用语法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/skill/vue/code/code.html" class="sidebar-link">代码优化</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/skill/vue/methods/methods.html" class="sidebar-link">实用方法</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>实用工具</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/skill/vue/utils/skills.html" class="sidebar-link">实用技能</a></li><li><a href="/docs/skill/vue/utils/filters.html" aria-current="page" class="active sidebar-link">过滤器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/skill/vue/utils/filters.html#目录" class="sidebar-link">目录</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span></span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/skill/vue/animations/animations.html" class="sidebar-link">常用动画</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="目录"><a href="#目录" class="header-anchor">#</a> 目录</h2> <p><strong>1. <a href="#jump1">金钱加逗号</a></strong><br> <strong>2. <a href="#jump2">保留小数位</a></strong><br> <strong>3. <a href="#jump3">格式化时间</a></strong></p> <h3 id="_1-金钱加逗号"><a href="#_1-金钱加逗号" class="header-anchor">#</a> <span id="jump1">1.金钱加逗号</span></h3> <p>🍹 需求分析<br>
+金钱补逗号</p> <p>✨ 解决方案</p> <div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">'formatMoney'</span><span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">number</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>number<span class="token punctuation">.</span>length <span class="token operator">&lt;=</span> <span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>number <span class="token operator">==</span> <span class="token string">''</span> <span class="token operator">?</span> <span class="token string">'0'</span> <span class="token operator">:</span> number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> mod <span class="token operator">=</span> number<span class="token punctuation">.</span>length <span class="token operator">%</span> <span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> output <span class="token operator">=</span> <span class="token punctuation">(</span>mod <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">?</span> <span class="token string">''</span> <span class="token operator">:</span> <span class="token punctuation">(</span>number<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> mod<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>number<span class="token punctuation">.</span>length <span class="token operator">/</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>mod <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        output <span class="token operator">+=</span> number<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>mod <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> i<span class="token punctuation">,</span> mod <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">else</span>
+        output <span class="token operator">+=</span> <span class="token string">','</span> <span class="token operator">+</span> number<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>mod <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> i<span class="token punctuation">,</span> mod <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> i <span class="token operator">+</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 使用</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span>abc <span class="token operator">+</span> <span class="token string">''</span> <span class="token operator">|</span> formatMoney<span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="_2-保留小数位"><a href="#_2-保留小数位" class="header-anchor">#</a> <span id="jump2">2.保留小数位</span></h3> <p>🍹 需求分析<br>
+保留小数位</p> <p>✨ 解决方案</p> <div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">'fixed'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value<span class="token punctuation">,</span> type</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token punctuation">(</span>value<span class="token operator">+</span><span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">includes</span><span class="token punctuation">(</span><span class="token string">&quot;*&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> value
+  value <span class="token operator">=</span> <span class="token punctuation">(</span>value <span class="token operator">/</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token number">0</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>value <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">&quot;0&quot;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token keyword">typeof</span> value <span class="token operator">==</span> <span class="token string">'number'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>value <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'0'</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> value<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">''</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 使用</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span>abc <span class="token operator">|</span> <span class="token function">fixed</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><h3 id="_3-格式化时间"><a href="#_3-格式化时间" class="header-anchor">#</a> <span id="jump3">3.格式化时间</span></h3> <p>🍹 需求分析<br>
+格式化时间</p> <p>✨ 解决方案</p> <div class="language-js extra-class"><pre class="language-js"><code>Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">'date'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>value<span class="token punctuation">,</span>type <span class="token operator">=</span> <span class="token string">'YYYY-MM-DD-hh-mm-ss'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> inputTime <span class="token operator">=</span> value <span class="token operator">*</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> date <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span>inputTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> y <span class="token operator">=</span> date<span class="token punctuation">.</span><span class="token function">getFullYear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> m <span class="token operator">=</span> date<span class="token punctuation">.</span><span class="token function">getMonth</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  m <span class="token operator">=</span> m <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token string">'0'</span> <span class="token operator">+</span> m<span class="token punctuation">)</span> <span class="token operator">:</span> m<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> d <span class="token operator">=</span> date<span class="token punctuation">.</span><span class="token function">getDate</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  d <span class="token operator">=</span> d <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token string">'0'</span> <span class="token operator">+</span> d<span class="token punctuation">)</span> <span class="token operator">:</span> d<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> h <span class="token operator">=</span> date<span class="token punctuation">.</span><span class="token function">getHours</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  h <span class="token operator">=</span> h <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token string">'0'</span> <span class="token operator">+</span> h<span class="token punctuation">)</span> <span class="token operator">:</span> h<span class="token punctuation">;</span>
+  <span class="token keyword">var</span> minute <span class="token operator">=</span> date<span class="token punctuation">.</span><span class="token function">getMinutes</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> second <span class="token operator">=</span> date<span class="token punctuation">.</span><span class="token function">getSeconds</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  minute <span class="token operator">=</span> minute <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token string">'0'</span> <span class="token operator">+</span> minute<span class="token punctuation">)</span> <span class="token operator">:</span> minute<span class="token punctuation">;</span>
+  second <span class="token operator">=</span> second <span class="token operator">&lt;</span> <span class="token number">10</span> <span class="token operator">?</span> <span class="token punctuation">(</span><span class="token string">'0'</span> <span class="token operator">+</span> second<span class="token punctuation">)</span> <span class="token operator">:</span> second<span class="token punctuation">;</span>
+  <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'YYYY-MM-DD-hh-mm-ss'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> y <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> m <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> h <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> minute <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> second<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'YYYY-MM-DD hh:mm'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> y <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> m <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> h <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> minute 
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'hh-mm'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> h <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> minute
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'hh-mm-ss'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> h <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> minute <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> second
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'YYYY-MM-DD'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> y <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> m <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> d
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'YYYY-MM-DD-hh-mm'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> y <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> m <span class="token operator">+</span> <span class="token string">'-'</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> h <span class="token operator">+</span> <span class="token string">':'</span> <span class="token operator">+</span> minute
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'MM-DD'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> m<span class="token operator">/</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token string">&quot;月&quot;</span> <span class="token operator">+</span> d<span class="token operator">/</span><span class="token number">1</span> <span class="token operator">+</span> <span class="token string">&quot;日&quot;</span>
+  <span class="token punctuation">}</span><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>type <span class="token operator">===</span> <span class="token string">'YYYY/MM/DD'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> y <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> m <span class="token operator">+</span> <span class="token string">'/'</span> <span class="token operator">+</span> d
+  <span class="token punctuation">}</span>
+  
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 使用</span>
+<span class="token punctuation">{</span><span class="token punctuation">{</span>abc <span class="token operator">|</span> <span class="token function">date</span><span class="token punctuation">(</span><span class="token string">'YYYY-MM-DD'</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2020年10月13日星期二下午5点03分</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/skill/vue/utils/skills.html" class="prev">
+        实用技能
+      </a></span> <span class="next"><a href="/docs/skill/vue/animations/animations.html">
+        常用动画
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/docs/assets/js/app.a41a76ec.js" defer></script><script src="/docs/assets/js/2.2946c6af.js" defer></script><script src="/docs/assets/js/27.440ab64e.js" defer></script>
+  </body>
+</html>
