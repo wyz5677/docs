@@ -1,5 +1,5 @@
 ---
-title: js常用语法
+title: es6总结
 ---
 
 
@@ -10,6 +10,7 @@ title: js常用语法
 **1. [promise](#jump1)**   
 **2. [async](#jump2)**   
 **3. [箭头函数](#jump3)**  
+**4. [class](#jump4)**  
 
 
 ### <span id="jump1">1.promise</span>
@@ -299,4 +300,91 @@ helloAsync();
         this.name = name;
     };
     let one = new Person("galler");
+```
+
+### <span id="jump4">4.class</span>
+:tropical_drink: 原理:   
+    ES6 的类，完全可以看作构造函数的另一种写法。也就是一种语法糖.
+
+要点:
+
+    1.ES6 的类，完全可以看作构造函数的另一种写法。
+    2.使用
+    3.类的原型
+    4.constructor()方法是类的默认方法
+
+:sparkles: 解释要点1
+``` js
+    // 构造函数生成实例对象
+    function Point(x, y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    Point.prototype.toString = function () {
+        return '(' + this.x + ', ' + this.y + ')';
+    };
+
+    var p = new Point(1, 2);
+
+    // Class生成实例对象 定义toString()方法的时候，前面不需要加上function这个关键字，直接把函数定义放进去了就可以了。另外，方法与方法之间不需要逗号分隔，加了会报错。
+    class Point {
+        constructor(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
+        toString() {
+            return '(' + this.x + ', ' + this.y + ')';
+        }
+    }
+```
+
+:sparkles: 解释要点2
+``` js
+    class Bar {
+        doStuff() {
+            console.log('stuff');
+        }
+    }   
+
+    const b = new Bar();
+    b.doStuff() // "stuff"
+```
+
+:sparkles: 解释要点3
+``` js
+    class Point {
+        constructor() {
+            // ...
+        }
+        // 与下面的方法其实都定义在prototype属性上面
+        toString() {
+            // ...
+        }
+
+        toValue() {
+            // ...
+        }
+    }
+
+    // 等同于
+
+    Point.prototype = {
+        constructor() {},
+        toString() {},
+        toValue() {},
+    };
+```
+
+:sparkles: 解释要点4
+``` js
+    //constructor()方法是类的默认方法，通过new命令生成对象实例时，自动调用该方法。一个类必须有constructor()方法，如果没有显式定义，一个空的constructor()方法会被默认添加。
+    class Point {
+    }
+
+    // 等同于
+    class Point {
+        constructor() {}
+    }
 ```

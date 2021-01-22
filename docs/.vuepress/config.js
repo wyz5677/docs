@@ -50,6 +50,7 @@ module.exports = {
               { text: '常用js对象等api', link: '/skill/javascript/objectApi/j-arrayApi' },
               { text: '常用dom操作', link: '/skill/javascript/dom/dom-css' },
               { text: 'es6总结', link: '/skill/javascript/es6/es6' },
+              { text: '实用工具', link: '/skill/javascript/utils/utils' },
             ] }
           ]
         },
@@ -105,16 +106,23 @@ module.exports = {
             title: '常用dom操作',
             collapsable: false,
             children: [
-              { title: 'js控制css', path:'dom/dom-css'}
+              { title: 'js常用语法', path:'dom/dom-css'}
             ]
           },
           {
             title: 'es6总结',
             collapsable: false,
             children: [
-              { title: 'promise', path:'es6/es6'}
+              { title: 'es6总结', path:'es6/es6'}
             ]
           },
+          {
+            title: '实用工具',
+            collapsable: false,
+            children: [
+              { title: '实用工具', path:'utils/utils'}
+            ]
+          }
         ],
         '/skill/vue/': [
           {
